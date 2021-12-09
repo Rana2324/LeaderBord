@@ -1,0 +1,125 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: royalblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header nav{
+    background-color: white;
+    
+}
+nav{
+    height: 50px;
+    border-radius: 10px;
+    line-height: 30px;
+    font-size: 25px;
+   
+}
+nav li{
+    list-style: none;
+    float: left;
+    padding: 10px;
+}
+nav li:hover{
+    background-color: yellow;
+    font-size: 30px;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}
+section{
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+}
+.section-tittle{
+    color: violet;
+}
+
+
+main, header {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.top-players,
+.blogs,
+.courses,
+nav {
+    display: grid;
+    grid-gap: 30px;
+    margin-top: 20px;
+    place-items: center;
+}
+
+.top-players, .courses {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.blogs {
+
+    grid-template-columns: repeat(2, 1fr);
+    
+    }
+    .player img {
+        height: 50px;
+        margin-right: 20px;
+    }
+
+    .thumbnail img {
+        height: 100px;
+        margin-right: 20px;
+    }
+
+    .player,
+    .blog {
+        display: flex;
+        align-items: center;
+    }
+    .filled{
+        font-size: 0.8em;
+        color: goldenrod;
+    }
+    .unfilled{
+        font-size: 0.8em;
+        color: lightgray;
+    }
+    .corse-info{
+        display: flex;
+        
+    }
+    .course img{
+       width: 200px;
+    }
+
+    @media (max-width:992px) {
+        .top-players, .courses {
+
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        .blogs {
+
+            grid-template-columns: repeat(1, 1fr);
+            
+         }
+    }
+
+    @media (max-width:662px) {
+        .top-players, .courses {
+
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+        .blog {
+
+            display: block;
+         }
+    }
